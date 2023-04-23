@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Tweets-Test-Task/static/css/main.7acaea2f.css",
+    "main.js": "/Tweets-Test-Task/static/js/main.1a7367db.js",
+    "index.html": "/Tweets-Test-Task/index.html",
+    "main.7acaea2f.css.map": "/Tweets-Test-Task/static/css/main.7acaea2f.css.map",
+    "main.1a7367db.js.map": "/Tweets-Test-Task/static/js/main.1a7367db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.1a7367db.js"
+  ]
+}
