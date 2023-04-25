@@ -7,9 +7,7 @@ const TweetsList = ({ tweets }) => {
       <ul>
         {tweets.map(tweet => {
           return (
-            <li key={tweet.id}>
-              <TweetCard tweet={tweet} />
-            </li>
+              <TweetCard key={tweet.id} tweet={tweet} />
           );
         })}
       </ul>

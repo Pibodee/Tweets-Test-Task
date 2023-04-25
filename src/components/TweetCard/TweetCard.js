@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Card, FollowBtn, Pic, TweetsText, Wrapper } from './TweetCard.styled';
+import { Card, FollowBtn, ImageThumb, Pic, TweetsText, Wrapper } from './TweetCard.styled';
 import { fetchFollow } from 'services/fetch';
 
 const TweetCard = ({ tweet }) => {
@@ -25,7 +25,9 @@ const TweetCard = ({ tweet }) => {
 
   return (
     <Card>
-      <Pic src={`${tweet.avatar}`} alt="avatar" />
+      <ImageThumb>
+        <Pic src={`${tweet.avatar}`} alt="avatar" />
+      </ImageThumb>
       <Wrapper>
         <TweetsText>
           {user.tweets.toLocaleString('en', { useGrouping: true })} tweets
