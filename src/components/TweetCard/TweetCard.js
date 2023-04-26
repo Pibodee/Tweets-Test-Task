@@ -1,20 +1,30 @@
 import { useEffect, useState } from 'react';
-import { Card, FollowBtn, ImageThumb, Pic, TweetsText, Wrapper } from './TweetCard.styled';
+import {
+  Card,
+  FollowBtn,
+  ImageThumb,
+  Pic,
+  TweetsText,
+  Wrapper,
+} from './TweetCard.styled';
 import { fetchFollow } from 'services/fetch';
-import * as alterAvatar from '../../images/Avatar_alter.jpg'
+import * as alterAvatar from '../../images/Avatar_alter.jpg';
 
-const TweetCard = ({ tweet }) => {
-  const [isActive, setIsActive] = useState(JSON.parse(localStorage.getItem(`${tweet.id}`)) || false);
+const TweetCard = ({ tweet, followed, setFollowed }) => {
+  const [isActive, setIsActive] = useState(JSON.parse(followed));
   const [user, setUser] = useState(tweet);
 
   const followClick = () => {
     if (!isActive) {
       setIsActive(true);
+      setFollowed(prev => [...prev, tweet]);
       setUser(prev => ({ ...prev, followers: prev.followers + 1 }));
-      localStorage.setItem(`${user.id}`, JSON.stringify(!isActive))
     } else {
       setIsActive(false);
-      localStorage.setItem(`${user.id}`, JSON.stringify(!isActive))
+      setFollowed(prev => {
+        const newFollowed = prev.filter(item => item.user !== tweet.user);
+        return newFollowed;
+      });
       setUser(prev => ({ ...prev, followers: prev.followers - 1 }));
     }
   };
@@ -22,7 +32,6 @@ const TweetCard = ({ tweet }) => {
   useEffect(() => {
     if (user === tweet) return;
     fetchFollow(user).catch(error => console.log(error));
-    
   }, [tweet, user]);
 
   return (
