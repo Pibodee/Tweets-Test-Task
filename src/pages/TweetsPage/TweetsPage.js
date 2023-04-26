@@ -51,9 +51,9 @@ const TweetsPage = () => {
         >
           &#x3c; Back
         </PageBtn>
-        {isLoading && <Loader />}
         {tweets && <TweetsList tweets={tweets} />}
         {isMore && <PageBtn onClick={loadMore}>Load More</PageBtn>}
+        {isLoading && <Loader />}
       </Container>
     </>
   );

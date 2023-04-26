@@ -5,7 +5,7 @@ export const Loader = () => {
   return (
     <Box className="wrapper">
       <ThreeDots
-        color="#3f51b5"
+        color="#e3bd4f"
         height="150"
         width="150"
         radius="9"

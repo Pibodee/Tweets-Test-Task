@@ -20,6 +20,7 @@ const TweetCard = ({ tweet }) => {
   };
 
   useEffect(() => {
+    if (user === tweet) return;
     fetchFollow(user).catch(error => console.log(error));
     
   }, [tweet, user]);
