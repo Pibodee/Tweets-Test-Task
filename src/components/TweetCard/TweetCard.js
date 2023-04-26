@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Card, FollowBtn, ImageThumb, Pic, TweetsText, Wrapper } from './TweetCard.styled';
 import { fetchFollow } from 'services/fetch';
+import * as alterAvatar from '../../images/Avatar_alter.jpg'
 
 const TweetCard = ({ tweet }) => {
   const [isActive, setIsActive] = useState(JSON.parse(localStorage.getItem(`${tweet.id}`)) || false);
@@ -26,7 +27,7 @@ const TweetCard = ({ tweet }) => {
   return (
     <Card>
       <ImageThumb>
-        <Pic src={`${tweet.avatar}`} alt="avatar" />
+        <Pic src={tweet.avatar ?? alterAvatar.default} alt="avatar" />
       </ImageThumb>
       <Wrapper>
         <TweetsText>

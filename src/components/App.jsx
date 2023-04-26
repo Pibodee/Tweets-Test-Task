@@ -1,25 +1,25 @@
 import { Route, Routes } from 'react-router-dom';
 import Homepage from 'pages/Homepage/Homepage';
 import TweetsPage from 'pages/TweetsPage/TweetsPage';
+import { Footer, FooterLink, Header, Main, Signature, Title } from './App.styled';
 
 export const App = () => {
   return (
     <>
-      <header>
-        <h2>Tweet App</h2>
-      </header>
-      <main>
+      <Header>
+        <Title>Wellcome to Tweet App!</Title>
+      </Header>
+      <Main>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/tweets" element={<TweetsPage />} />
-          {/* <Route path="/tweets/:tweetId" element={<TweetDetails />} /> */}
         </Routes>
-      </main>
-      <footer>
-        <p>
-          by <a href="https://github.com/Pibodee">Pibodee</a> , 2023
-        </p>
-      </footer>
+      </Main>
+      <Footer>
+        <Signature>
+          &#169; by <FooterLink href="https://github.com/Pibodee">Pibodee</FooterLink> , 2023
+        </Signature>
+      </Footer>
     </>
   );
 };

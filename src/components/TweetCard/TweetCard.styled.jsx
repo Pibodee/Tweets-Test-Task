@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import * as backgroundImage from '../../images/picture1.png';
 import * as bgImageLarge from '../../images/picture2.png';
-import * as goItLogo from '../../images/Logo.svg'
+import * as goItLogo from '../../images/Logo.svg';
 
 export const Card = styled.li`
   position: relative;
@@ -9,6 +9,8 @@ export const Card = styled.li`
   height: 460px;
   padding-top: 178px;
   box-sizing: border-box;
+  font-weight: 500;
+  color: #ebd8ff;
 
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
@@ -95,6 +97,13 @@ export const FollowBtn = styled.button`
   width: 196px;
   height: 50px;
   padding: 14px 28px;
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #373737;
+  cursor: pointer;
 
   background-color: ${props => (props.isActive ? '#5cd3a8' : '#ebd8ff')};
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);

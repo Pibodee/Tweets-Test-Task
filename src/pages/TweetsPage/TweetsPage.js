@@ -3,6 +3,7 @@ import TweetsList from 'components/TweetsList/TweetsList';
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { fetchTweets } from 'services/fetch';
+import { PageBtn, Container} from './TweetsPage.styled';
 
 const TweetsPage = () => {
   const [tweets, setTweets] = useState([]);
@@ -41,19 +42,19 @@ const TweetsPage = () => {
 
   return (
     <>
-      <div>
-        <button
+      <Container>
+        <PageBtn
           type="button"
           onClick={() => {
             navigate(location.state?.from ?? '/');
           }}
         >
-          Back
-        </button>
+          &#x3c; Back
+        </PageBtn>
         {isLoading && <Loader />}
         {tweets && <TweetsList tweets={tweets} />}
-        {isMore && <button onClick={loadMore}>Load More</button>}
-      </div>
+        {isMore && <PageBtn onClick={loadMore}>Load More</PageBtn>}
+      </Container>
     </>
   );
 };
