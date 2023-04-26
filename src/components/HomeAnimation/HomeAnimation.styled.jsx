@@ -11,6 +11,7 @@ export const Circles = styled.ul`
   width: 100%;
   height: 100%;
   overflow: hidden;
+  margin: 0 auto;
 `;
 
 export const Elems = styled.li`

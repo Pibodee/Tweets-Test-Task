@@ -1,6 +1,7 @@
 import TweetCard from 'components/TweetCard/TweetCard';
 import { List } from './TweetsList.styled';
 import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 const TweetsList = ({
   tweets,
@@ -57,3 +58,12 @@ const TweetsList = ({
 };
 
 export default TweetsList;
+
+TweetsList.propTypes = {
+  tweets: PropTypes.array.isRequired,
+  filter: PropTypes.string,
+  followId: PropTypes.array,
+  setFollowed: PropTypes.func.isRequired,
+  setIsMore: PropTypes.func.isRequired,
+  lastPage: PropTypes.bool.isRequired,
+};

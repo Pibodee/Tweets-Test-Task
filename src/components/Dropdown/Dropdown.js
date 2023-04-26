@@ -1,4 +1,5 @@
 import { Filter, Select } from './Dropdown.styled';
+import PropTypes from 'prop-types';
 
 const Dropdown = ({ setFilter }) => {
   const handleFilter = e => {
@@ -20,3 +21,7 @@ const Dropdown = ({ setFilter }) => {
 };
 
 export default Dropdown;
+
+Dropdown.propTypes = {
+  setFilter: PropTypes.func.isRequired,
+};

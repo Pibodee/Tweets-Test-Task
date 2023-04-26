@@ -1,6 +1,6 @@
-import { useLocation } from "react-router-dom";
-import { StyledNav, Text } from "./Homepage.styled";
-import HomeBackground from "components/HomeAnimation/HomeAnimation";
+import { useLocation } from 'react-router-dom';
+import { StyledNav, Text } from './Homepage.styled';
+import HomeBackground from 'components/HomeAnimation/HomeAnimation';
 
 const Homepage = () => {
   const location = useLocation();
@@ -10,10 +10,9 @@ const Homepage = () => {
       <StyledNav to="/tweets" state={{ from: location }}>
         Tweets
       </StyledNav>
-      <HomeBackground/>
+      <HomeBackground />
     </>
   );
 };
 
-
-export default Homepage
+export default Homepage;

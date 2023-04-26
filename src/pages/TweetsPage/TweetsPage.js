@@ -10,7 +10,7 @@ const TweetsPage = () => {
   const [tweets, setTweets] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState(1);
-  const [lastPage, setLastPage] = useState(false)
+  const [lastPage, setLastPage] = useState(false);
   const [isMore, setIsMore] = useState(false);
   const [followed, setFollowed] = useState(
     JSON.parse(localStorage.getItem('followed')) || []
@@ -44,7 +44,7 @@ const TweetsPage = () => {
     fetchTweets(page)
       .then(data => {
         if (data.length < 3) {
-          setLastPage(true)
+          setLastPage(true);
           setIsMore(false);
           return;
         }

@@ -14,12 +14,12 @@ display: block;
 position: relative;`;
 
 export const HomeLink = styled(NavLink)`
-display: block;
-padding: 5px;
-position: absolute;
-left: 15px;
-top: 5px;
-`
+  display: block;
+  padding: 5px;
+  position: absolute;
+  left: 15px;
+  top: 5px;
+`;
 
 export const Title = styled.h2`
   padding: 0;
@@ -59,5 +59,3 @@ export const FooterLink = styled.a`
   text-decoration: none;
   color: #21b367;
 `;
-
-// #8D81DC

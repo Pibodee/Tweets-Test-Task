@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import {
   Card,
   FollowBtn,
@@ -55,3 +56,15 @@ const TweetCard = ({ tweet, followed, setFollowed }) => {
 };
 
 export default TweetCard;
+
+TweetCard.propTypes = {
+  tweet: PropTypes.shape({
+    user: PropTypes.string.isRequired,
+    tweets: PropTypes.number.isRequired,
+    followers: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+  }).isRequired,
+  followed: PropTypes.bool.isRequired,
+  setFollowed: PropTypes.func.isRequired,
+};
