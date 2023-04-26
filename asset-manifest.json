@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/Tweets-Test-Task/static/css/main.7acaea2f.css",
-    "main.js": "/Tweets-Test-Task/static/js/main.17b0cff7.js",
+    "main.css": "/Tweets-Test-Task/static/css/main.d0aa1a0c.css",
+    "main.js": "/Tweets-Test-Task/static/js/main.d7136cec.js",
+    "static/media/Avatar_alter.jpg": "/Tweets-Test-Task/static/media/Avatar_alter.4b1822e13f639c746633.jpg",
     "static/media/picture2.png": "/Tweets-Test-Task/static/media/picture2.74a3d0a511d2f9354195.png",
     "static/media/picture1.png": "/Tweets-Test-Task/static/media/picture1.b3d9942b3f9d5dad1ff0.png",
     "static/media/Logo.svg": "/Tweets-Test-Task/static/media/Logo.e917114d7945c04c85a8946a331d28b6.svg",
     "index.html": "/Tweets-Test-Task/index.html",
-    "main.7acaea2f.css.map": "/Tweets-Test-Task/static/css/main.7acaea2f.css.map",
-    "main.17b0cff7.js.map": "/Tweets-Test-Task/static/js/main.17b0cff7.js.map"
+    "main.d0aa1a0c.css.map": "/Tweets-Test-Task/static/css/main.d0aa1a0c.css.map",
+    "main.d7136cec.js.map": "/Tweets-Test-Task/static/js/main.d7136cec.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.17b0cff7.js"
+    "static/css/main.d0aa1a0c.css",
+    "static/js/main.d7136cec.js"
   ]
 }
