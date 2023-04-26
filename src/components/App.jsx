@@ -13,7 +13,7 @@ export const App = () => {
     <>
       <Header>
         <IconContext.Provider value={{ size: '2em' }}>
-          <HomeLink href="/">
+          <HomeLink to="/">
             <FcApproval />
           </HomeLink>
         </IconContext.Provider>

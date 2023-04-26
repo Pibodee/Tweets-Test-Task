@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Header = styled.header`
@@ -12,7 +13,7 @@ z-index: 50;
 display: block;
 position: relative;`;
 
-export const HomeLink = styled.a`
+export const HomeLink = styled(NavLink)`
 display: block;
 padding: 5px;
 position: absolute;
